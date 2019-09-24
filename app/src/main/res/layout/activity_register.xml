@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+        <EditText
+            android:inputType="text"
+            android:hint="enter firstname"
+            android:id="@+id/firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="textEmailAddress"
+            android:hint="enter email"
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            android:hint="enter password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="text"
+            android:hint="enter gender"
+            android:id="@+id/user_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="date"
+            android:hint="enter dob"
+            android:id="@+id/user_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:hint="enter mob"
+            android:id="@+id/user_mob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="text"
+            android:hint="enter state"
+            android:id="@+id/user_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="text"
+            android:hint="enter country"
+            android:id="@+id/user_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/signup"
+            android:textAlignment="center"
+            android:text="Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
