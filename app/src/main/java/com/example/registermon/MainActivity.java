@@ -24,11 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-
-
         reg = findViewById(R.id.register);
-
-
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 String Email = email.getText().toString();
                 String Password = password.getText().toString();
 
-                LoginPost loginPost = new LoginPost(Email, Password);
+                LoginPost loginPost = new LoginPost(Email, Password);//here we are passing data to initialise constroctor of LoginPost();
                 Call<LoginPojo> pojoCall = BaseUrl.getClient().create(ApiInetrface.class).loginUser(loginPost);
+                //here we are implementing api to save data in database
                 if (email.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "enter email", Toast.LENGTH_SHORT).show();
                 } else if (!isEmailValid()) {
@@ -67,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                                 String code = response.body().getCode();
                                 if (code.equals(String.valueOf(200))) {
                                     Toast.makeText(MainActivity.this, "Successfully connected" + response.body().getMessage(), Toast.LENGTH_SHORT).show();
-
 
                                 } else {
                                     Toast.makeText(MainActivity.this, "" + response.body().getMessage(), Toast.LENGTH_SHORT).show();

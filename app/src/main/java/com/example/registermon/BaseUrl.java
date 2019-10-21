@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class BaseUrl {
     private static Retrofit retrofit = null;
-    public static final String Base_url = "https://dev.monetrewards.com/MonetApp/Monetsdk/api/";
+    public static final String Base_url = "http://app.monetrewards.com/MonetSdk/api/";
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
