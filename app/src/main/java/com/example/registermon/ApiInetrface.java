@@ -13,7 +13,8 @@ public interface ApiInetrface {
     //loginUser is method to send data on server
     // loginPost is parameters(Email,Password)which we are sending on server.
     // we already got Email,Password in on create method
+    //example using Post method in both login and register.
     @POST("register")
-    Call<RegisterPojo> registerUser(@Body RegisterPost registerPost);
+    Call<RegisterPojo> registerUser(@Body RegisterPost  registerPost);
 
 }
